@@ -67,13 +67,8 @@ function ni() {
         shift
         ni-remove $@
         ;;
-      # Special ni run <script>
-      test)
-        shift
-        ni-run test $@
-        ;;
       *)
-        echo "Unknown subcommand: $1"
+        ni-run $@
         ;;
     esac
     return
